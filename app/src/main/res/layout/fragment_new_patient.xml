@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.NewPatientFragment">
+
+
+    <include
+        android:id="@+id/form"
+        layout="@layout/form_layout"
+        tools:layout_editor_absoluteX="-57dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_patient"
+        android:layout_width="@dimen/round_button_diameter"
+        android:layout_height="@dimen/round_button_diameter"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/footer"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="15dp"
+        android:text="@string/new_patient_button_create"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:cornerRadius="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:theme="@style/ProgressBarStyle"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/add_patient"
+        app:layout_constraintEnd_toEndOf="@+id/add_patient"
+        app:layout_constraintStart_toStartOf="@+id/add_patient"
+        app:layout_constraintTop_toTopOf="@+id/add_patient" />
+</androidx.constraintlayout.widget.ConstraintLayout>

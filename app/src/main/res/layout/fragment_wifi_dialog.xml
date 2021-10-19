@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="265dp"
+    android:layout_height="300dp"
+    android:minWidth="265dp"
+    android:minHeight="300dp"
+    android:layout_marginTop="64dp"
+    android:layout_gravity="center_horizontal"
+    style="@style/Theme.MaterialComponents.Light.Dialog"
+    android:background="@drawable/wifi_dialog_background">
+
+
+    <TextView
+        android:id="@+id/txtSelectWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select wifi"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectWifi" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWifi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="8dp"
+        tools:listitem="@layout/item_wifi"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+     />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressLoader"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:indeterminate="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txtScanning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scanning..."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressLoader"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="txtScanning, progressLoader"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

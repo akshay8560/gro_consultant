@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.PatientsResultFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/stylist_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient Name"
+        android:textColor="@color/text"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/select_patient"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@color/footer"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        android:padding="5dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="0.5dp"
+        android:insetTop="0dp"
+        android:fontFamily="@font/roboto_bold"
+        android:insetBottom="0dp"
+        android:textSize="@dimen/_10ssp"
+        android:text="Select"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

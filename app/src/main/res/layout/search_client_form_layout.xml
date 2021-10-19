@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".85" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo" />
+
+
+
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        tools:text="@string/search_client"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title">
+
+        <EditText
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_textfield_height"
+            android:background="@drawable/input_textfield"
+            android:hint="First Name"
+            android:id="@+id/firstname"
+            android:paddingLeft="@dimen/input_padding"
+            android:inputType="text"
+            android:textSize="@dimen/text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:id="@+id/firstnameErr"
+            tools:text="The first name must be a string. The first name field is required"
+            android:textColor="@color/error"
+            android:textSize="@dimen/input_text"
+            android:visibility="invisible" />
+
+        <EditText
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_textfield_height"
+            android:id="@+id/lastname"
+            android:background="@drawable/input_textfield"
+            android:hint="Last Name"
+            android:inputType="text"
+            android:paddingLeft="@dimen/input_padding"
+            android:textSize="@dimen/text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            tools:text="The last name must be a string. The last name field is required"
+            android:textColor="@color/error"
+
+            android:id="@+id/lastnameErr"
+            android:textSize="@dimen/input_text"
+            android:visibility="invisible" />
+
+
+
+        <EditText
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_textfield_height"
+            android:paddingLeft="@dimen/input_padding"
+            android:background="@drawable/input_textfield"
+            android:hint="Cell Number"
+            android:id="@+id/phone"
+            android:inputType="phone"
+            android:textSize="@dimen/text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The phone field is required"
+            android:textColor="@color/error"
+            android:id="@+id/phoneErr"
+            android:textSize="@dimen/input_text"
+            android:visibility="invisible" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    tools:context=".ui.camera.PortraitPositionSelectionFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".00" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_head_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".30" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/front_head_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".68" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/show_data_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".18" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/show_data_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/show_data_start"
+        app:layout_constraintVertical_bias="0"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/show_data_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_data_start">
+
+        <TextView
+            android:id="@+id/patientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:text="Patient Name"
+            android:textColor="@color/text"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="280dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:background="@color/input_text" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Global Images"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="Select Image Positions"
+            android:textColor="@color/text"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/right_head_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onClickSetSelected"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/right_head_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@id/show_data_end">
+
+        <ImageView
+            android:id="@+id/female_right_side_img"
+            style="@style/Theme.GroTrack.HeadImages"
+            android:src="@drawable/female_head_right"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/male_right_side_img"
+            style="@style/Theme.GroTrack.HeadImages"
+            android:src="@drawable/male_head_right"
+            android:visibility="visible" />
+
+        <CheckBox
+            android:id="@+id/right_side"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:button="@drawable/radio_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/front_head_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSetSelected"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/front_head_end"
+        app:layout_constraintStart_toStartOf="@+id/right_head_end"
+        app:layout_constraintTop_toTopOf="@id/show_data_end">
+
+        <ImageView
+            android:id="@+id/female_front_side_img"
+            style="@style/Theme.GroTrack.HeadImages"
+            android:src="@drawable/female_head_frontal"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/male_front_side_img"
+            style="@style/Theme.GroTrack.HeadImages"
+            android:src="@drawable/male_head_frontal"
+            android:visibility="visible" />
+
+        <CheckBox
+            android:id="@+id/front_side"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:button="@drawable/radio_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/left_head_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:onClick="onClickSetSelected"
+        app:layout_constraintStart_toStartOf="@+id/front_head_end"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/show_data_end">
+
+        <ImageView
+            android:id="@+id/female_left_side_img"
+            style="@style/Theme.GroTrack.HeadImages"
+            android:src="@drawable/female_head_left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/male_left_side_img"
+            style="@style/Theme.GroTrack.HeadImages"
+            android:src="@drawable/male_head_left"
+            android:visibility="visible" />
+
+        <CheckBox
+            android:id="@+id/left_side"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:button="@drawable/radio_button" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/front_head_container">
+
+        <LinearLayout
+            android:id="@+id/top_head_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:onClick="onClickSetSelected"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/female_top_side_img"
+                style="@style/Theme.GroTrack.HeadImages"
+                android:src="@drawable/female_head_top"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/male_top_side_img"
+                style="@style/Theme.GroTrack.HeadImages"
+                android:src="@drawable/male_head_top"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/top_side"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:button="@drawable/radio_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/back_head_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onClickSetSelected"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/female_back_side_img"
+                style="@style/Theme.GroTrack.HeadImages"
+                android:src="@drawable/female_head_back"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/male_back_side_img"
+                style="@style/Theme.GroTrack.HeadImages"
+                android:padding="10dp"
+                android:src="@drawable/male_head_back"
+                android:visibility="visible" />
+
+
+            <CheckBox
+                android:id="@+id/back_side"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:button="@drawable/radio_button" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/btn_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:layout_constraintBottom_toTopOf="@id/shoot"
+        app:layout_constraintStart_toStartOf="@id/right_head_end">
+
+        <RadioButton
+            android:id="@+id/select_all_positions"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:button="@drawable/radio_button"
+            android:paddingHorizontal="10dp"
+            android:text="Select All Positions"
+            android:textColor="@color/text"
+            android:textSize="@dimen/text" />
+
+        <RadioButton
+            android:id="@+id/skip_all_positions"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:button="@drawable/radio_button"
+            android:layout_marginTop="5dp"
+            android:paddingHorizontal="10dp"
+            android:text="Skip, Go To Close Up"
+            android:textColor="@color/text"
+            android:textSize="@dimen/text"/>
+    </RadioGroup>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shoot"
+        android:layout_width="@dimen/round_button_diameter"
+        android:layout_height="@dimen/round_button_diameter"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/footer"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="2dp"
+        android:text="Start Shoot"
+        android:textAllCaps="false"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_grp"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

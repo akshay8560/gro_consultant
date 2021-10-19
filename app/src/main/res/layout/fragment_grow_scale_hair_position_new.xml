@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.camera.PortraitPositionSelectionFragment">
+
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/imageView2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/show_data_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/linearLayout9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/show_data_start">
+
+        <TextView
+            android:id="@+id/patientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Patient Name"
+            android:textColor="@color/text"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="280dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/input_text" />
+
+
+
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/male_left_img"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:background="@drawable/male_head_right"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/data_start"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/icons_start">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/male_hair_left"
+            android:layout_height="15dp"
+            android:layout_width="15dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/checkbox_scale"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/female_left_img"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:background="@drawable/female_head_right"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_end"
+        app:layout_constraintEnd_toStartOf="@+id/data_start"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/second_row_start">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/female_hair_left"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/checkbox_button" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        app:layout_constraintEnd_toStartOf="@+id/front_head_end"
+        app:layout_constraintStart_toStartOf="@+id/data_start"
+        app:layout_constraintTop_toBottomOf="@+id/icons_start"
+        android:id="@+id/male_crown"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/male_head_top"
+        android:orientation="vertical"
+        android:visibility="visible"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/crown_bottom"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_height="15dp"
+                android:layout_width="15dp"
+                android:background="@drawable/checkbox_scale"
+                />
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/crown_middle"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_height="15dp"
+                android:layout_width="15dp"
+                android:background="@drawable/checkbox_scale"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/crown_top"
+                android:layout_height="15dp"
+                android:layout_width="15dp"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/checkbox_scale"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/female_crown"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/female_head_top"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_start"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/icons_start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/female_crown_top"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/checkbox_button"
+
+                />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/female_crown_middle"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/checkbox_button" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/female_crown_bottom"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/checkbox_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/female_back_img"
+        android:layout_width="115dp"
+        android:layout_height="105dp"
+        android:background="@drawable/female_head_back"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_end"
+        app:layout_constraintEnd_toStartOf="@+id/front_head_end"
+        app:layout_constraintStart_toStartOf="@+id/data_start"
+        app:layout_constraintTop_toBottomOf="@+id/second_row_start">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/female_hair_back"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/checkbox_button" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:id="@+id/male_right_img"
+        android:background="@drawable/male_head_left"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/front_head_end"
+        app:layout_constraintTop_toTopOf="@+id/icons_start">
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/male_hair_right"
+            android:layout_height="15dp"
+            android:layout_width="15dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/checkbox_scale" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:visibility="gone"
+        android:layout_marginLeft="-10dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_end"
+        android:id="@+id/female_right_img"
+        android:background="@drawable/female_head_left"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/front_head_end"
+        app:layout_constraintTop_toTopOf="@+id/second_row_start">
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/female_hair_right"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/checkbox_button" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:text="Crown"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_15ssp" />
+
+
+    <ImageView
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"/>
+
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        android:id="@+id/tv_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:text="Class || Early thining"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_15ssp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btHome"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_marginBottom="90dp"
+        android:backgroundTint="@color/footer"
+        android:text="SOLUTIONS"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>

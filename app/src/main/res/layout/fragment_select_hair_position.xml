@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.camera.PortraitPositionSelectionFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/data_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".34" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/front_head_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".66" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/show_data_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".16" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/icons_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".33" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_row_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".58" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_row_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".8" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/show_data_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/show_data_start">
+
+        <TextView
+            android:id="@+id/patientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Patient Name"
+            android:textColor="@color/text"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="280dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/input_text" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Close Up Hair Images"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:text="Select Image Positions"
+            android:textColor="@color/text"
+            android:textSize="@dimen/text" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/male_crown"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/male_head_top"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_start"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/icons_start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/crown_bottom"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:background="@drawable/checkbox_button"
+                />
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/crown_middle"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/checkbox_button"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/crown_top"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/checkbox_button"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/female_crown"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/female_head_top"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_start"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/icons_start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/female_crown_top"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/checkbox_button"
+
+                />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/female_crown_middle"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/checkbox_button" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/female_crown_bottom"
+                style="@style/Theme.GroTrack.CheckBox"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/checkbox_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/male_left_img"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:background="@drawable/male_head_right"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/data_start"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/second_row_start">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/male_hair_left"
+            android:layout_height="20dp"
+            android:layout_width="25dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/checkbox_button"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/female_left_img"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+
+        android:background="@drawable/female_head_right"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_end"
+        app:layout_constraintEnd_toStartOf="@+id/data_start"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/second_row_start">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/female_hair_left"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/checkbox_button" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/male_back_img"
+        android:layout_width="110dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/male_head_back"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/front_head_end"
+        app:layout_constraintStart_toStartOf="@+id/data_start"
+        app:layout_constraintTop_toBottomOf="@+id/second_row_start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="center">
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/male_hair_back"
+                android:layout_height="20dp"
+                android:layout_width="25dp"
+                android:button="@null"
+                android:layout_gravity="center"
+                android:background="@drawable/checkbox_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/female_back_img"
+        android:layout_width="115dp"
+        android:layout_height="105dp"
+        android:background="@drawable/female_head_back"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_end"
+        app:layout_constraintEnd_toStartOf="@+id/front_head_end"
+        app:layout_constraintStart_toStartOf="@+id/data_start"
+        app:layout_constraintTop_toBottomOf="@+id/second_row_start">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/female_hair_back"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/checkbox_button" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="00dp"
+        android:layout_height="115dp"
+        android:id="@+id/male_right_img"
+        android:background="@drawable/male_head_left"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/front_head_end"
+        app:layout_constraintTop_toTopOf="@+id/second_row_start">
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/male_hair_right"
+            android:layout_height="20dp"
+            android:layout_width="25dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/checkbox_button" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:visibility="gone"
+        android:layout_marginLeft="-10dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_row_end"
+        android:id="@+id/female_right_img"
+        android:background="@drawable/female_head_left"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/front_head_end"
+        app:layout_constraintTop_toTopOf="@+id/second_row_start">
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/female_hair_right"
+            style="@style/Theme.GroTrack.CheckBox"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/checkbox_button" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/second_row_end">
+
+        <RadioButton
+            android:id="@+id/select_all_positions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/select_all_positions"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shoot"
+        android:layout_width="@dimen/round_button_diameter"
+        android:layout_height="@dimen/round_button_diameter"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/footer"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="2dp"
+        android:text="@string/start_shoot"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/second_row_end" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

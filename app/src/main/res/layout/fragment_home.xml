@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cornerRadius="57dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:backgroundTint="@color/footer"
+            android:layout_marginBottom="13dp"
+            app:iconGravity="top"
+            android:paddingEnd="25dp"
+            app:icon="@drawable/ic_patient"
+            app:iconSize="50dp"
+            android:id="@+id/existingPatient"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:text="@string/existing_patient"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/newPatient"
+            android:layout_marginTop="50dp"
+            app:cornerRadius="57dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:backgroundTint="@color/btn"
+            android:layout_marginBottom="13dp"
+            android:paddingEnd="25dp"
+            app:iconGravity="top"
+            app:iconSize="50dp"
+            app:icon="@drawable/ic_patient"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:text="@string/new_patient"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/textcolor"
+        android:text="@string/log_out"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_2sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:background="@drawable/logout_border"
+          android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+</androidx.constraintlayout.widget.ConstraintLayout>

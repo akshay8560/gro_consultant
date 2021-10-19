@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Consultant App</string>
+    <string name="password_err">Password is Required</string>
+    <string name="email_err">Email Address is Required</string>
+    <string name="enter_email">Enter Email..</string>
+    <string name="enter_password">password</string>
+    <string name="existing_patient">Existing Client</string>
+    <string name="new_patient">New Client</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_patient_button_create">Create</string>
+    <string name="create_new_patient">Create New Patient</string>
+    <string name="start_shoot">Start Shoot</string>
+    <string name="select_all_positions">Select All Positions</string>
+    <string name="finished">Finished</string>
+    <string name="processing">Processing</string>
+    <string name="search_client">Search Client</string>
+    <string name="user_name">user name</string>
+    <string name="user_err">user name is Required</string>
+    <string name="password">password</string>
+    <string name="log_out">Log out</string>
+    <string name="search">Search</string>
+  <string name="gro_scale">Gro Scale</string>
+ <string name="gro_score">Gro Scoreb</string>
+
+</resources>

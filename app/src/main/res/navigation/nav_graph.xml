@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.clinicapp.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_newPatientFragment"
+            app:destination="@id/newPatientFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchPatientFragment"
+            app:destination="@id/searchPatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPatientFragment"
+        android:name="com.clinicapp.ui.home.NewPatientFragment"
+        android:label="New Patient"
+        tools:layout="@layout/fragment_new_patient" >
+        <action
+            android:id="@+id/action_newPatientFragment_to_selectShootPosition"
+            app:destination="@id/selectShootPosition" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchPatientFragment"
+        android:name="com.clinicapp.ui.home.SearchPatientsFragment"
+        android:label="Search Patient"
+        tools:layout="@layout/fragment_search_patients" >
+        <action
+            android:id="@+id/action_searchPatientFragment_to_resultScreen"
+            app:destination="@id/resultScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultScreen"
+        android:name="com.clinicapp.ui.home.SearchResultsContainerFragment"
+        android:label="Search Results"
+        tools:layout="@layout/fragment_search_results" >
+        <action
+            android:id="@+id/action_resultScreen_to_selectShootPosition"
+            app:destination="@id/selectShootPosition" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectShootPosition"
+        android:name="com.clinicapp.ui.camera.PortraitPositionSelectionFragment"
+        android:label="fragment_portrait_image_selection"
+        tools:layout="@layout/fragment_portrait_image_selection" >
+        <action
+            android:id="@+id/action_selectShootPosition_to_cameraFragment"
+            app:destination="@id/cameraFragment" >
+            <argument
+                android:name="isPortrait"
+                android:defaultValue="true" />
+        </action>
+        <action
+            android:id="@+id/action_selectShootPosition_to_selectHairPosition"
+            app:destination="@id/selectHairPosition"/>
+        <argument
+            android:name="DATA"
+            app:argType="com.clinicapp.models.Patient" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.clinicapp.ui.camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_returnToHomeScreen"
+            app:destination="@id/returnToHomeScreen" />
+        <argument
+            android:name="isPortrait"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnToHomeScreen"
+        android:name="com.clinicapp.ui.camera.ReturnToHomeScreenFragment"
+        android:label="fragment_return_or_shoot_hair"
+        tools:layout="@layout/fragment_return_or_shoot_hair" >
+        <action
+            android:id="@+id/action_returnToHomeScreen_to_selectHairPosition"
+            app:destination="@id/selectHairPosition" />
+        <action
+            android:id="@+id/action_returnToHomeScreen_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="isPortrait"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectHairPosition"
+        android:name="com.clinicapp.ui.camera.SelectHairPositionFragment"
+        android:label="Select Hair Position"
+        tools:layout="@layout/fragment_select_hair_position" >
+        <action
+            android:id="@+id/action_selectHairPosition_to_cameraFragment"
+            app:destination="@id/cameraFragment" >
+            <argument
+                android:name="isPortrait"
+                android:defaultValue="false" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/select_growscale"
+        android:name="com.clinicapp.ui.camera.SelectHairPositionFragment"
+        android:label="Select Hair Position"
+        tools:layout="@layout/fragment_select_hair_position" >
+        <action
+            android:id="@+id/action_selectHairPosition_to_cameraFragment"
+            app:destination="@id/cameraFragment" >
+            <argument
+                android:name="isPortrait"
+                android:defaultValue="false" />
+        </action>
+    </fragment>
+</navigation>
